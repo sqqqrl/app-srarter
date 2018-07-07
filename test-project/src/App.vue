@@ -39,13 +39,14 @@ export default {
   margin-bottom: 200px;
 }
 
-.list__tile {
+.list {
   display: flex;
   flex-flow: column;
   justify-content: space-around;
   align-items: center;
-  height: 200px;
+  height: 300px;
   background-color: #ffffff;
+  padding: 15px 0;
 }
 
 .menu__content {

@@ -1,5 +1,5 @@
 <template>
-<v-layout xs10 offset-xs1 row wrap class="mb-5__adapt">
+<v-layout id="pricingTarget" xs10 offset-xs1 row wrap class="mb-5__adapt">
   <v-flex xs10 offset-xs1 lg5 offset-lg0 class="vh__center vh__adpt">
     <v-flex xs12 lg7 class="choose__text">
       <h1>Choose <span>your plan</span></h1>

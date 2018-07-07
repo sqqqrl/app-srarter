@@ -1,5 +1,5 @@
 <template>
-  <v-layout row wrap xs8 align-center justify-center offset-xs2 class="pt-5 pb-5">
+  <v-layout id="featuresTarget" row wrap xs8 align-center justify-center offset-xs2 class="pt-5 pb-5">
     <v-flex xs12 lg5>
       <v-flex xs12 sm8 md7 lg12 offset-sm2 class="mb-3 pa-4">
         <v-layout row class="different__grd">

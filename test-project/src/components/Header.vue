@@ -10,24 +10,20 @@
         </v-btn>
 
         <v-list>
-          <v-list-tile>
-            <a class="group__btn" href="#">Features</a>
-            <a class="group__btn" href="#">Video Tour</a>
-            <a class="group__btn" href="#">Reviews</a>
-            <a class="group__btn" href="#">Pricing</a>
-            <a class="group__btn" href="#">GET IT FREE</a>
+          <v-list-tile
+            v-for="(item, index) in items"
+            :key="index">
+            <a class="group__btn" href="#">{{ item.title }}</a>
           </v-list-tile>
         </v-list>
       </v-menu>
     <v-toolbar  flat dark class="hidden-sm-and-down ovr__hd">
       <v-toolbar-title>AppStarter</v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items class="align-center none__case">
-        <v-btn class="mr-3" flat>Features</v-btn>
-        <v-btn class="mr-3" flat>Video Tour</v-btn>
-        <v-btn class="mr-3" flat>Reviews</v-btn>
-        <v-btn class="mr-3" flat>Pricing</v-btn>
-        <v-btn class="white round mr-3">GET IT FREE</v-btn>
+      <v-toolbar-items class="align-center none__case"
+        v-for="(item, index) in items"
+        :key="index">
+        <v-btn class="mr-3" v-scroll-to="`${item.target}`" flat>{{ item.title }}</v-btn>
       </v-toolbar-items>
       <v-toolbar-side-icon v-on:click="click"></v-toolbar-side-icon>
     </v-toolbar>
@@ -50,21 +46,40 @@
 
 <script>
 export default {
-  data () {
-    return {
-      active: false
-    }
-  },
-  methods: {
-    click () {
-      this.active = !this.active
-    }
-  }
+  data: () => ({
+    items: [
+      {
+        title: 'Features',
+        target: '#featuresTarget'
+      },
+      {
+        title: 'Video Tour',
+        target: '#videoTarget'
+      },
+      {
+        title: 'Reviews',
+        target: '#reviewTarget'
+      },
+      {
+        title: 'Pricing',
+        target: '#pricingTarget'
+      },
+      { title: 'GET IT FREE' }
+    ]
+  })
 }
 </script>
 
 <style scoped>
-.round {
+
+.none__case:nth-child(n+1) > button {
+  text-transform: none;
+  font-family: NunitoSans;
+  font-size: 15px;
+}
+
+.toolbar__items:nth-last-child(-2n+2) > button {
+  background-color: white !important;
   border-radius: 6px;
   box-shadow: 0px 6px 12px 0 rgba(40, 43, 49, 0.08);
   color: black;
@@ -73,12 +88,6 @@ export default {
   font-size: 14px;
   font-weight: bold;
   font-family: NunitoSans;
-}
-
-.none__case > button:nth-child(n+1) {
-  text-transform: none;
-  font-family: NunitoSans;
-  font-size: 15px;
 }
 
 .toolbar__title {

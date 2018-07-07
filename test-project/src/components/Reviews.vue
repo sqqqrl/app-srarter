@@ -1,5 +1,5 @@
 <template>
-  <v-layout row wrap>
+  <v-layout id="reviewTarget" row wrap>
     <v-flex xs12 md4 lg4 class="white around__flex">
       <v-flex xs10  lg6 offset-xs1 offset-lg3 class="asd">
         <div class="customers">

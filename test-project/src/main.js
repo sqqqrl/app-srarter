@@ -6,10 +6,24 @@ import router from './router'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import VeeValidate from 'vee-validate'
+import VueScrollTo from 'vue-scrollto'
 
 Vue.use(VeeValidate)
 
 Vue.use(Vuetify)
+Vue.use(VueScrollTo)
+Vue.use(VueScrollTo, {
+  container: 'body',
+  duration: 1000,
+  easing: 'ease',
+  offset: 0,
+  cancelable: true,
+  onStart: false,
+  onDone: false,
+  onCancel: false,
+  x: false,
+  y: true
+})
 
 /* eslint-disable no-new */
 new Vue({

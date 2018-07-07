@@ -1,5 +1,5 @@
 <template>
-  <v-layout row wrap class="bg__play__video">
+  <v-layout id="videoTarget" row wrap class="bg__play__video">
     <v-flex class="bg__gradient"></v-flex>
     <v-flex xs12 class="on__img">
       <v-flex xs12 sm8 md6 lg4 offset-sm2 offset-md3 offset-lg4 class="stl__text pt-5 pb-5">
