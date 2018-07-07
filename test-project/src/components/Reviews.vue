@@ -210,4 +210,10 @@ export default {
     margin-right: 0;
   }
 }
+
+@media (max-width: 960px){
+  .mr__adapt {
+    height: auto;
+  }
+}
 </style>

@@ -36,7 +36,6 @@ export default {
   background-image: url('./assets/img/bg1.png');
   background-size: cover;
   background-repeat: no-repeat;
-  margin-bottom: 200px;
 }
 
 .list {

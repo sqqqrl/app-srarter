@@ -13,7 +13,7 @@
           <v-list-tile
             v-for="(item, index) in items"
             :key="index">
-            <a class="group__btn" href="#">{{ item.title }}</a>
+            <a class="group__btn" v-scroll-to="`${item.target}`" href="#">{{ item.title }}</a>
           </v-list-tile>
         </v-list>
       </v-menu>

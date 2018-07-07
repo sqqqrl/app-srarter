@@ -176,5 +176,9 @@ export default {
   .more__than__mp {
     padding: 30px 0;
   }
+  .bg__touch {
+    height: auto;
+    padding-bottom: 40px;
+  }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <v-layout column class="bg__grey">
-    <v-flex xs12 class="bg__theme">
+    <v-flex xs12 class="bg__theme mb-200px">
       <v-flex xs10 offset-xs1>
         <header>
           <page-header />
@@ -63,5 +63,14 @@ header {
   background-color: #f8f9fa;
   overflow: hidden;
   position: relative;
+}
+.mb-200px {
+  margin-bottom: 200px;
+}
+
+@media (max-width: 1800px){
+  .mb-200px {
+    margin-bottom: 20px;
+  }
 }
 </style>
