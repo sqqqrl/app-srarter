@@ -6,7 +6,7 @@
           dark
           icon
         >
-          <v-toolbar-side-icon v-on:click="click"></v-toolbar-side-icon>
+          <v-toolbar-side-icon></v-toolbar-side-icon>
         </v-btn>
 
         <v-list>
@@ -25,7 +25,7 @@
         :key="index">
         <v-btn class="mr-3" v-scroll-to="`${item.target}`" flat>{{ item.title }}</v-btn>
       </v-toolbar-items>
-      <v-toolbar-side-icon v-on:click="click"></v-toolbar-side-icon>
+      <v-toolbar-side-icon></v-toolbar-side-icon>
     </v-toolbar>
     <v-container fluid grid-list-md >
       <v-layout row wrap align-center class="adaptive__space__between">
